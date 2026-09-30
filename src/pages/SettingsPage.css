@@ -1,0 +1,198 @@
+.settings-page {
+  min-height: 100vh;
+  background-color: var(--bg-light);
+  padding: 40px 0;
+}
+
+body.dark-mode .settings-page {
+  background-color: #1a1a1a;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 40px 0;
+  color: var(--text-dark);
+}
+
+body.dark-mode .page-title {
+  color: #ffffff;
+}
+
+.settings-container {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.settings-section {
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+body.dark-mode .settings-section {
+  background-color: #2a2a2a;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px;
+  margin: 0;
+  color: var(--primary-navy);
+  background-color: var(--bg-light);
+  border-bottom: 1px solid var(--border-gray);
+}
+
+body.dark-mode .section-title {
+  color: var(--primary-gold);
+  background-color: #3a3a3a;
+  border-bottom-color: #444;
+}
+
+.settings-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+body.dark-mode .settings-item {
+  border-bottom-color: #3a3a3a;
+}
+
+.settings-item:last-child {
+  border-bottom: none;
+}
+
+.item-label {
+  flex: 1;
+}
+
+.item-label h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: var(--text-dark);
+}
+
+body.dark-mode .item-label h3 {
+  color: #ffffff;
+}
+
+.item-label p {
+  font-size: 13px;
+  color: var(--text-light);
+  margin: 0;
+}
+
+body.dark-mode .item-label p {
+  color: #aaa;
+}
+
+.settings-input,
+.settings-select {
+  padding: 10px 12px;
+  border: 1px solid var(--border-gray);
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  cursor: not-allowed;
+}
+
+body.dark-mode .settings-input,
+body.dark-mode .settings-select {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  border-color: #444;
+}
+
+.settings-select {
+  cursor: pointer;
+  min-width: 150px;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  width: 50px;
+  height: 28px;
+  border: none;
+  border-radius: 14px;
+  background-color: #ccc;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.toggle-btn.active {
+  background-color: var(--primary-gold);
+}
+
+.toggle-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  left: 2px;
+  transition: all 0.3s;
+}
+
+.toggle-btn.active .toggle-circle {
+  left: 24px;
+}
+
+/* Link Button */
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--primary-gold);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.link-btn:hover {
+  color: var(--primary-navy);
+}
+
+/* Save Button */
+.settings-footer {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-save {
+  flex: 1;
+  padding: 14px 24px;
+  background-color: var(--primary-gold);
+  color: var(--primary-navy);
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-save:hover {
+  background-color: var(--secondary-gold);
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .settings-container {
+    max-width: 100%;
+  }
+}
