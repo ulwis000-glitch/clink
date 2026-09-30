@@ -1,0 +1,103 @@
+.stores-list-page {
+  min-height: 100vh;
+  background-color: var(--bg-light);
+  padding: 40px 0;
+}
+
+body.dark-mode .stores-list-page {
+  background-color: #1a1a1a;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 40px 0;
+  color: var(--text-dark);
+}
+
+body.dark-mode .page-title {
+  color: #ffffff;
+}
+
+.stores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.store-card {
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  padding: 24px;
+  text-decoration: none;
+  color: var(--text-dark);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+body.dark-mode .store-card {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+.store-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+  border: 2px solid var(--primary-gold);
+}
+
+.store-logo {
+  font-size: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.store-desc {
+  font-size: 13px;
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.4;
+}
+
+body.dark-mode .store-desc {
+  color: #aaa;
+}
+
+.store-info {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.product-count {
+  font-size: 12px;
+  color: var(--text-light);
+  margin: 0;
+  background-color: var(--bg-light);
+  padding: 4px 12px;
+  border-radius: 16px;
+}
+
+body.dark-mode .product-count {
+  background-color: #3a3a3a;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .stores-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
